@@ -1,0 +1,11 @@
+.div{
+	padding: 1em;
+	border: 0.1em solid blue;
+	border-radius: 2em;
+	text-align: center;
+}
+
+.a_href{
+	color: green;
+	text-decoration: underline;
+}
