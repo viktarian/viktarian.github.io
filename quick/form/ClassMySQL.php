@@ -45,5 +45,13 @@ class ClassMySQL{
 		$sql='DELETE FROM `'.$table.'` WHERE `id` = '.$idNote;
 		$res=mysqli_query($this->link,$sql);
 	}
+	
+	//show info in table ----- do do do
+	function allNotes(){
+		$this->id_note=$this->mysql->lastId($table='articles',$name_column='id');//id последнего материала
+		for ($i=$this->id_note;$i>0;$i--){
+			$this->tds($i);
+		}
+	}
 }
 ?>

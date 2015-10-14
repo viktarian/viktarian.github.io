@@ -6,6 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+<?php
+include('config.php');
+include('ClassMySQL.php');
+?>
 
 <table>
 	<tr>
