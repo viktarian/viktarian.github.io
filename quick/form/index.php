@@ -7,6 +7,8 @@
 </head>
 <body>
 
+<a href="admin.php" target="blank">админка</a><br>
+
 <?php
 include('config.php');
 include('ClassMySQL.php');
