@@ -47,10 +47,41 @@ class ClassMySQL{
 	}
 	
 	//show info in table ----- do do do
-	function allNotes(){
-		$this->id_note=$this->mysql->lastId($table='articles',$name_column='id');//id последнего материала
-		for ($i=$this->id_note;$i>0;$i--){
-			$this->tds($i);
+		//просто вся инфа
+	function allNotes($table,$arrayCols){
+		$numberCols=count($arrayCols);
+		$lastId=$this->lastId($table,$name_column='id');
+		$id=$lastId;
+		while($id>0){
+			echo'<tr>';
+				$i=0;
+				while($i<$numberCols){
+					echo'<td>'.$this->textCell($table=$table,$name_column=$arrayCols[$i],$id=$id).'</td>';
+					$i=$i+1;
+				}
+			echo'</tr>';
+			$id=$id-1;
+		}
+	}
+		//просто вся инфа + последний столбик - checkbox
+	function allNotes2($table,$arrayCols){
+		$numberCols=count($arrayCols);
+		$lastId=$this->lastId($table,$name_column='id');
+		$id=$lastId;
+		while($id>0){
+			echo'<tr>';
+				$i=0;
+				while($i<$numberCols){
+					echo'<td>'.$this->textCell($table=$table,$name_column=$arrayCols[$i],$id=$id).'</td>';
+					$i=$i+1;
+				}
+				//checkbox
+				if($this->textCell($table=$table,$name_column='send',$id=$id)==1){
+					echo'<td><input type="checkbox" checked onClick="checkbox(\''.$id.'\')" id="check'.$id.'"></td>';
+				}
+				else{echo'<td><input type="checkbox" onClick="checkbox(\''.$id.'\')" id="check'.$id.'"></td>';}
+			echo'</tr>';
+			$id=$id-1;
 		}
 	}
 }
