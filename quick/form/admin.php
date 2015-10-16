@@ -31,7 +31,7 @@ $mysql=new ClassMySQL();
 
 <div class="send" id="send">
 	Введите текст рассылки:<br>
-	<textarea id="text">test</textarea><br>
+	<textarea class="text" id="text">test</textarea><br>
 	<button class="buttonSend" id="buttonSend">Send</button>
 </div>
 

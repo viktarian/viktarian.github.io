@@ -30,7 +30,9 @@ function checkbox(idNote){
 
 $(document).ready(function(){
 	$('#buttonSend').click( function(){
-		var data='process=script2';
+		var text=document.getElementById('text').value;
+		var data='process=script2'+
+			'&text='+text;
 		transfer(data);
 	});
 });
