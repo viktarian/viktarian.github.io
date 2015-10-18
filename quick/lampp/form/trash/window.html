@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+		<meta charset="utf-8" />
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ 
+<title>Popup Form Window</title>
+ 
+<script type="text/javascript">
+<!--
+function formWind()
+{
+    var newWind = window.open("", "newwin", "width=500, height=500, top=50, left=50, status=no, location=no, toolbar=no, menubar=no");
+    newWind.document.write("<html><head>");
+    newWind.document.write("<title>FormWindow</title>");
+    newWind.document.write("</head>");
+    newWind.document.write("<body style=\"text-align:center;\">");
+    newWind.document.write("<form name=\"\" action=\"\" method=\"post\">");
+    newWind.document.write("<input type=\"text\" size=\"20\" name=\"\">");
+    newWind.document.write("<input type=\"submit\" value=\"Send\" name=\"\">");
+    newWind.document.write("</body></html>");
+}
+//-->
+</script>
+ 
+</head>
+ 
+<body>
+ 
+<input type="button" value="Открыть новое окно с формой" onclick="formWind()">
+ 
+</body>
+ 
+</html>
