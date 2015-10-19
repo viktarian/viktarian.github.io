@@ -6,9 +6,9 @@ define ('C_DS', DIRECTORY_SEPARATOR); // разделитель для путе�
 		/* define('C_HD', '/home/cvr/public_html');//путь к корневой папке
 		define ('C_HD_l', '/');//путь к корневой папке, заданной через настройки сервера	  */
 	//localhost
-		//define('C_HD', 'D:\xampp\htdocs\test\form');//путь к корневой папке - winda
-		define('C_HD', '/opt/lampp/htdocs/remrep/testemail');//путь к корневой папке - ubuntu
-		define ('C_HD_l', '/remrep/testemail/');//путь к корневой папке, заданной через настройки сервера
+		define('C_HD', 'D:\xampp\htdocs\remrep\viktarian.github.io\quick\lampp\testemail');//путь к корневой папке - winda
+		// define('C_HD', '/opt/lampp/htdocs/remrep/testemail');//путь к корневой папке - ubuntu
+		define ('C_HD_l', '/remrep/viktarian.github.io/quick/lampp/testemail/');//путь к корневой папке, заданной через настройки сервера
 
 		
 //подключение к базе

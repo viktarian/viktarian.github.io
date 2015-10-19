@@ -9,7 +9,7 @@
 
 <?php
 include('config.php');
-include('ClassMySQL.php');
+include('library/ClassMySQL.php');
 $mysql=new ClassMySQL();
 $mysql->update($table='subscription',$name_column='send',$info='0',$id=$_GET['id']);
 //echo 'id - '.$_GET['id'];

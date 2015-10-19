@@ -13,21 +13,27 @@ class HTMLpageAdminCVR extends HTMLpageAdmin{
 		echo'<script src="'.C_HD_l.'admin/transfer.js"></script>';
 	}
 	function writeBodyConstant3(){
-echo'
-<div class="exitAdmin">';$this->echoExitAdmin();echo'</div>
-<table rules="cols">
-	<tr>
-		<td>id</td>
-		<td>name</td>
-		<td>email</td>
-		<td>рассылка</td>
-	</tr>';
-	include('./../library/ClassMySQL.php');
-	$mysql=new ClassMySQL();
-	$mysql->allNotes2($table='subscription',$arrayCols=array('id','name','email'));
-echo'</table>
-<div id="divDynamic"></div>
-';
+		echo'<div class="exitAdmin">';$this->echoExitAdmin();echo'</div>';
+		echo'<br>';
+		echo'<table rules="cols">
+			<tr>
+				<td>id</td>
+				<td>имя</td>
+				<td>email</td>
+				<td>рассылка</td>
+			</tr>';
+			include('./../library/ClassMySQL.php');
+			$mysql=new ClassMySQL();
+			$mysql->allNotes2($table='subscription',$arrayCols=array('id','name','email'));
+		echo'</table>';
+		echo'<br>';
+		echo'<div id="divDynamic"></div>';
+		echo'<br>';
+		echo'
+		<div class="send" id="send">
+			<textarea class="text" id="text" placeholder="текст рассылки"></textarea><br>
+			<button class="buttonSend" id="buttonSend">Разослать</button>
+		</div>';
 	}
 }
 
